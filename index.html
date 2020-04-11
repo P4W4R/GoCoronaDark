@@ -1,0 +1,326 @@
+<html>
+    <head>
+    <style>  
+        *{
+            box-sizing: border-box;
+        }
+        
+        .column{
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+        
+        .row{
+            margin: 0 -5px;
+        }
+        
+        .row: after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        @media screen and (max-width: 600px){
+            .column{
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #242424;
+            color: white;
+            font-family: Segoe UI;
+        }
+        
+        .h3 {
+            color: white;
+            font-family: Segoe UI;
+        }
+
+
+        #cor {
+  color: white;
+  font-family: Segoe UI;
+ border-collapse: collapse;
+  width: 100%;
+}
+
+#cor td, #cor th {
+  padding: 8px;
+}
+
+#cor tr:nth-child(even){background-color: #242424;}
+
+#cor tr:hover {background-color: #4C4C4C;}
+
+#cor th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4C4C4C;
+  color: white;
+}
+</style>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+        <body bgcolor="#121212">
+           <br><br>
+            <H2 align="center" style="color: white; font-family: Segoe UI;" id="stateName">COVID-19 Tracker India</H2>
+           <br><br>
+               <div class="row">
+                   <div class="row">
+                       <div class="column">
+                           <div class="card">
+                               <h3>Total Cases</h3>
+                                 <h4 id="unionCases"></h4>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                
+                <div class="row">
+                   <div class="row">
+                       <div class="column">
+                           <div class="card">
+                                 <h3>Active Cases</h3>
+                                 <h4 id="unionAct"></h4>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                
+                <div class="row">
+                   <div class="row">
+                       <div class="column">
+                           <div class="card">
+                                 <h3>Death</h3>
+                              <h4 id="unionDeths"></h4> 
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            
+              <div class="row">
+                   <div class="row">
+                       <div class="column">
+                           <div class="card">
+                              <h3>Recoveries</h3>
+                                 <h4 id="unionRec"></h4>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+           
+        
+          <br><br>   <br><br>   <br><br>   <br><br>   <br><br>
+          
+                 <table id="cor">
+           <thead>
+               <tr>
+                   <th><h4>State / U.T.</h3></t4>
+                   <th><h4 align="center">Cases</h4></th>
+                   <th><h4 align="center">Death</h4></th>
+                   <th><h4 align="center">Recoveries</h4></th>
+                </tr>
+            </thead>
+    <!--khalcha table-->
+                <tr>
+                    <td><h5 id="s1l"></h5></td>
+                    <td><h5 id="s1c" align="center"></h5></td>
+                    <td><h5 id="s1d" align="center"></h5></td>
+                    <td><h5 id="s1r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s2l"></h6></td>
+                    <td><h5 id="s2c" align="center"></h5></td>
+                    <td><h5 id="s2d" align="center"></h5></td>
+                    <td><h5 id="s2r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s3l"></h6></td>
+                    <td><h5 id="s3c" align="center"></h5></td>
+                    <td><h5 id="s3d" align="center"></h5></td>
+                    <td><h5 id="s3r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s4l"></h6></td>
+                    <td><h5 id="s4c" align="center"></h5></td>
+                    <td><h5 id="s4d" align="center"></h5></td>
+                    <td><h5 id="s4r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s5l"></h6></td>
+                    <td><h5 id="s5c" align="center"></h5></td>
+                    <td><h5 id="s5d" align="center"></h5></td>
+                    <td><h5 id="s5r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s6l"></h6></td>
+                    <td><h5 id="s6c" align="center"></h5></td>
+                    <td><h5 id="s6d" align="center"></h5></td>
+                    <td><h5 id="s6r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s7l"></h6></td>
+                    <td><h5 id="s7c" align="center"></h5></td>
+                    <td><h5 id="s7d" align="center"></h5></td>
+                    <td><h5 id="s7r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s8l"></h6></td>
+                    <td><h5 id="s8c" align="center"></h5></td>
+                    <td><h5 id="s8d" align="center"></h5></td>
+                    <td><h5 id="s8r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s9l"></h6></td>
+                    <td><h5 id="s9c" align="center"></h5></td>
+                    <td><h5 id="s9d" align="center"></h5></td>
+                    <td><h5 id="s9r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s10l"></h6></td>
+                    <td><h5 id="s10c" align="center"></h5></td>
+                    <td><h5 id="s10d" align="center"></h5></td>
+                    <td><h5 id="s10r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s11l"></h6></td>
+                    <td><h5 id="s11c" align="center"></h5></td>
+                    <td><h5 id="s11d" align="center"></h5></td>
+                    <td><h5 id="s11r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s12l"></h6></td>
+                    <td><h5 id="s12c" align="center"></h5></td>
+                    <td><h5 id="s12d" align="center"></h5></td>
+                    <td><h5 id="s12r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s13l"></h6></td>
+                    <td><h5 id="s13c" align="center"></h5></td>
+                    <td><h5 id="s13d" align="center"></h5></td>
+                    <td><h5 id="s13r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s14l"></h6></td>
+                    <td><h5 id="s14c" align="center"></h5></td>
+                    <td><h5 id="s14d" align="center"></h5></td>
+                    <td><h5 id="s14r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s15l"></h6></td>
+                    <td><h5 id="s15c" align="center"></h5></td>
+                    <td><h5 id="s15d" align="center"></h5></td>
+                    <td><h5 id="s15r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s16l"></h6></td>
+                    <td><h5 id="s16c" align="center"></h5></td>
+                    <td><h5 id="s16d" align="center"></h5></td>
+                    <td><h5 id="s16r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s17l"></h6></td>
+                    <td><h5 id="s17c" align="center"></h5></td>
+                    <td><h5 id="s17d" align="center"></h5></td>
+                    <td><h5 id="s17r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s18l"></h6></td>
+                    <td><h5 id="s18c" align="center"></h5></td>
+                    <td><h5 id="s18d" align="center"></h5></td>
+                    <td><h5 id="s18r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s19l"></h6></td>
+                    <td><h5 id="s19c" align="center"></h5></td>
+                    <td><h5 id="s19d" align="center"></h5></td>
+                    <td><h5 id="s19r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s20l"></h6></td>
+                    <td><h5 id="s20c" align="center"></h5></td>
+                    <td><h5 id="s20d" align="center"></h5></td>
+                    <td><h5 id="s20r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s21l"></h6></td>
+                    <td><h5 id="s21c" align="center"></h5></td>
+                    <td><h5 id="s21d" align="center"></h5></td>
+                    <td><h5 id="s21r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s22l"></h6></td>
+                    <td><h5 id="s22c" align="center"></h5></td>
+                    <td><h5 id="s22d" align="center"></h5></td>
+                    <td><h5 id="s22r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s23l"></h6></td>
+                    <td><h5 id="s23c" align="center"></h5></td>
+                    <td><h5 id="s23d" align="center"></h5></td>
+                    <td><h5 id="s23r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s24l"></h6></td>
+                    <td><h5 id="s24c" align="center"></h5></td>
+                    <td><h5 id="s24d" align="center"></h5></td>
+                    <td><h5 id="s24r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s25l"></h6></td>
+                    <td><h5 id="s25c" align="center"></h5></td>
+                    <td><h5 id="s25d" align="center"></h5></td>
+                    <td><h5 id="s25r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s26l"></h6></td>
+                    <td><h5 id="s26c" align="center"></h5></td>
+                    <td><h5 id="s26d" align="center"></h5></td>
+                    <td><h5 id="s26r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s27l"></h6></td>
+                    <td><h5 id="s27c" align="center"></h5></td>
+                    <td><h5 id="s27d" align="center"></h5></td>
+                    <td><h5 id="s27r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s28l"></h6></td>
+                    <td><h5 id="s28c" align="center"></h5></td>
+                    <td><h5 id="s28d" align="center"></h5></td>
+                    <td><h5 id="s28r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s29l"></h6></td>
+                    <td><h5 id="s29c" align="center"></h5></td>
+                    <td><h5 id="s29d" align="center"></h5></td>
+                    <td><h5 id="s29r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s30l"></h6></td>
+                    <td><h5 id="s30c" align="center"></h5></td>
+                    <td><h5 id="s30d" align="center"></h5></td>
+                    <td><h5 id="s30r" align="center"></h5></td>
+                </tr>
+                <tr>
+                    <td><h5 id="s31l"></h6></td>
+                    <td><h5 id="s31c" align="center"></h5></td>
+                    <td><h5 id="s31d" align="center"></h5></td>
+                    <td><h5 id="s31r" align="center"></h5></td>
+                </tr>
+        </table>
+           
+           
+           <!---->
+    
+            <!---->
+        </body>
+</html>
